@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительный отдел ООО Фирма Йылмаз</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Строительный отдел ООО Фирма Йылмаз</a>
+            <div class="nav-wrap">
+                <ul class="navbar-menu">
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="index.html#portfolio">Портфолио</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </div>
+
+
+            <a href="#" class="callback">Обратный звонок</a>
+        </div>
+    </nav>
+
+    <div class="custom-services-container">
+      <h1 class="main-service-title">Проектировка инженерных систем</h1>
+      <p class="main-service-description">Наши услуги по проектированию инженерных систем включают разработку и монтаж систем жизнеобеспечения зданий и сооружений. Мы специализируемся на создании надежных и эффективных систем отопления, гарантирующих тепло и уют в холодное время года. Качественные системы вентиляции и кондиционирования обеспечивают комфортный микроклимат и оптимальное качество воздуха. Продуманное водоснабжение и канализация являются ключом к функциональности любого помещения. А надежное электроснабжение, спроектированное с учетом всех потребностей и норм безопасности, позволяет создать удобное и безопасное пространство для жизни и работы. Мы работаем только с проверенными материалами и компонентами, чтобы наши системы служили долгие годы без необходимости частого обслуживания или ремонта.</p>
+      
+         <!-- Карусель -->
+                     
+         <div id="slider" class="slider">
+            <div class="slide active">
+              <img src="img/13.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+              <img src="img/22.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+              <img src="img/card2.jpg" alt="Slide 3">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </div>
+
+      <h2 class="additional-service-heading">Дополнительные услуги</h2>
+      <form action="submit-form.php" method="post" class="extra-services-form">
+          <div class="checkbox-group">
+              <input type="checkbox" id="design" name="additional_services" value="design">
+              <label for="design" class="checkbox-label">Разработка систем вентиляции и кондиционирования</label>
+          </div>
+  
+          <div class="checkbox-group">
+              <input type="checkbox" id="interior" name="additional_services" value="interior">
+              <label for="interior" class="checkbox-label">Проектирование систем отопления и водоснабжения</label>
+          </div>
+  
+          <div class="checkbox-group">
+              <input type="checkbox" id="landscape" name="additional_services" value="landscape">
+              <label for="landscape" class="checkbox-label">Разработка электропроектов и систем освещения</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="full-name" name="full_name" required placeholder="Ваше полное имя">
+            <input type="tel" id="phone" name="phone" required placeholder="Ваш номер телефона">
+        </div>
+          <button type="submit" class="send-request-button">Отправить запрос</button>
+      </form>
+  </div>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modalh2">Свяжитесь с нами</h2>
+        <form id="feedbackForm" class="vertical-form">
+            <div class="form-row">
+                <label for="name"> ФИО:</label>
+                <input type="text" id="name" name="name" placeholder="" required>
+            </div>
+            <div class="form-row">
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" placeholder="" required>
+            </div>
+            <div class="form-row">
+                <label for="comment">Ваш вопрос:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Введите ваш вопрос" required></textarea>
+                <p class="p-call">Специалист свяжется с вами в течение 10 минут</p>
+            </div>
+            <div class="form-row">
+                <button class="modal-button" type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-contact">
+            <p>Телефон: +7 (972) 333-3344</p>
+            <p>Email: firm@mail.com</p>
+        </div>
+        <p>&copy; 2024 Строительный отдел ООО Фирма Йылмаз. Все права защищены.</p>
+    </div>
+
+</footer>index.html
+
+</body>

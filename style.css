@@ -1,0 +1,985 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+
+/* мобильная адаптация */
+
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+/* добро пожаловать  */
+.intro-text {
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 20px; /* Добавляем небольшое пространство между блоками */
+
+}
+
+.intro-h2 {
+    font-size: 28px; /* Увеличиваем размер шрифта заголовка */
+    color: rgb(0, 0, 0); /* Устанавливаем цвет текста */
+    /* margin-bottom: 80px; */
+}
+
+.intro-text p {
+    border: 8px solid coral; /* Добавляем рамку вокруг текста */
+    border-radius: 20px; /* Закругляем углы рамки */
+    padding: 20px; /* Добавляем отступы внутри рамки */
+    font-family: Arial, sans-serif; /* Применяем красивый шрифт */
+    font-size: 20px; /* Устанавливаем размер шрифта */
+    line-height: 1.6; /* Устанавливаем высоту строки */
+    color: #000000; /* Устанавливаем цвет текста */
+    margin-left: 130px;
+    margin-right: 130px;
+    background-color:  rgb(216, 211, 211);
+    width: 600px;
+    height: 350px;
+    
+}
+
+.nav-wrap{
+    padding-right: 85px;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0, .1);
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container{
+   height: inherit; 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding-left: 0%;
+    margin-bottom: 0;
+    white-space: nowrap; /* Предотвращаем перенос слов */
+}
+
+.navbar-menu li {
+    display: inline-block; /* Располагаем элементы горизонтально */
+}
+
+.navbar-menu li a {
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 10px;
+    transition: all .07s ease-in-out;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar-menu li a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: coral;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    transform: translateY(-5px);
+}
+
+.navbar-menu li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.nawbar-wrap{
+  display: flex;
+    flex-flow: row nowrap;
+}
+
+.callback{
+    margin-left: 30px;
+    padding-right: 10px;
+    padding: 10px 30px;
+    background-color: coral;
+    border-radius: 100px;
+    color:white;
+    text-decoration: none;
+   transition: all .1s ease-in-out;
+   box-shadow: 0 4px 6px rgb(255, 117, 80, .2);
+}
+
+.callback:hover{
+    transform:scale(1.04);
+    color:white;
+    box-shadow: 0 9px 6px rgb(255, 127, 80, .2);
+}
+.navbar-brand{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-brand:hover{
+ color: coral;
+}
+
+.contentinfo{
+    font-size: 32px;
+    text-align: center;
+
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto; 
+    
+}
+
+/* Карточки товаров*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.services-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    width: 300px;
+    margin: 0 auto 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Raise the card slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover for a "lifting" effect */
+}
+
+.service-card img {
+    width: 300px;
+    height: 200px; /* Corrected the height value */
+    object-fit: cover; /* Ensure the image covers the area nicely */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.h2-serv {
+    text-align: center;
+    font-size: 40px;
+}
+
+.service-card h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service-card p {
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+}
+
+.service-card button {
+    display: inline-block;
+    background-color: coral;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for button */
+}
+
+.button-card {
+    display: inline-flex; /* Используем flexbox для центрирования текста */
+    align-items: center; /* Центрирование текста по вертикали */
+    justify-content: center; /* Центрирование текста по горизонтали */
+    background-color: coral;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание, если это ссылка */
+    text-shadow: none; /* Убираем тень текста, если она есть */
+    box-shadow: none; /* Убираем тень кнопки, если она есть */
+    border: none; /* Убедимся, что нет границ */
+    margin-top: auto;
+    font-size: 16px; /* Или любой другой размер шрифта, который вы используете */
+    width: 100%; /* Ширина кнопки 100% от её родительского контейнера */
+    box-sizing: border-box; /* Учитываем padding и border в ширине кнопки */
+}
+
+.service-card button:hover {
+    background-color: #ff7f50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for button */
+}
+
+
+/* окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #fefefe;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Стили для кнопки закрытия модального окна */
+.close {
+    position: absolute;
+    margin-top: 10px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+/* Стили для кнопок в модальном окне */
+.modal-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+/* Стили для кнопок в модальном окне при наведении */
+.modal-button:hover {
+    background-color: #ff7f50;
+}
+
+/* Стили для элементов формы в модальном окне */
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modalh2 {
+    margin-top: 0;
+}
+
+/* Стили для области комментария */
+.modal-content textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Стили для текста после комментария */
+.modal-content .comment-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.modal-content .p-call {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    margin-left: 2px; 
+    
+}
+
+/* О нас */
+.h1title{
+    text-align: center;
+    font-size: 40px;
+}
+/* .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    height: 450px;
+    padding-bottom: 20px;
+} */
+.about-us{
+    border: 8px solid coral;
+    border-radius: 20px;
+    padding: 20px;
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px #a19999;
+    text-align: justify; /* Равномерно распределяем текст по ширине */
+    font-family: Arial, sans-serif; /* Применяем красивый шрифт */
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    line-height: 1.5; /* Устанавливаем высоту строки */
+    letter-spacing: 0.5px; /* Устанавливаем пробелы между буквами */
+    background-color: rgb(216, 211, 211);
+}
+.about-h2{
+    text-align: center;
+}
+
+/* Подвал */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+
+
+/* приколы */
+.animate {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+}
+
+.animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* портфолио */
+
+/* .hover-effect-cover {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+} */
+
+
+
+/* .hover-effect-cover div > img {
+    width: 100%;
+    height: auto; */
+    /* object-fit: cover; Заполнение контейнера, сохраняя соотношение сторон */
+    /* object-position: center; Центрирование изображения */
+    /* transition: transform 0.4s ease-in-out; */
+/* } */
+
+/* .hover-effect-cover div:hover > img {
+    transform: scale(1.1);
+}
+
+.hover-effect-cover div > div.effect-to-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.hover-effect-cover div:hover > div.effect-to-top {
+    opacity: 1;
+} */
+
+/* .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bg {
+    flex: 0 1 calc(33.33% - 10px);
+    position: relative;
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.imgbg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.blackout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blackout h4 {
+    margin-top: -15px;
+    transition: margin-top 0.3s ease-in-out;
+    color: white;
+}
+
+.bg:hover .blackout {
+    opacity: 1;
+}
+
+.bg:hover .blackout h4 {
+    margin-top: 0;
+} */
+.port-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.modal-port{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+  
+
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .image-wrapper {
+    position: relative;
+    margin: 5px; /* Добавляем отступы между изображениями */
+    overflow: hidden;
+  }
+  
+  .image-wrapper img {
+    width: 400px; /* Укажите размеры ваших изображений */
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 266px;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+
+  /* Модальное окно в портфолио*/
+.Portf-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .Portf-modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+  }
+  
+  .Portf-close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .Portf-close:hover,
+  .Portf-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Стили для изображений внутри модального окна */
+  #galleryImages img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .modal-content img {
+    width: auto;
+    height: 90vh;
+  }
+  
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .portfolio-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-title h2 {
+    font-size: 24px;
+    color: #333; /* Цвет текста, подберите под свой дизайн */
+}
+
+
+
+/* Стили для модального окна */
+.contact-info {
+    border: 8px solid coral; /* Измените толщину рамки по вашему усмотрению */
+    border-radius: 20px;
+    box-shadow: 0 2px 4px #a19999;
+    padding: 20px;
+    width: 30%; /* Ширина блока */
+    box-shadow: 0 2px 4px #a19999;
+    text-align: center; /* Центрируем текст */
+    font-family: Arial, sans-serif; /* Применяем красивый шрифт */
+    margin: 0 auto; /* Центрирование блока по горизонтали */
+    margin-bottom: 20px;
+    background-color: rgb(216, 211, 211);
+}
+  
+  .contact-info h2 {
+    margin-top: 0;
+    font-size: 1.5em; /* Увеличиваем размер заголовка */
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    font-size: 1.1em; /* Увеличиваем размер текста */
+  }
+/* Удаление полосок в правом нижнем углу текстового поля ввода */
+#comment::-webkit-input-placeholder {
+    color: transparent;
+}
+#comment:-moz-placeholder {
+    color: transparent;
+}
+#comment::-moz-placeholder {
+    color: transparent;
+}
+#comment:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+
+/* Страницы с услугами */
+
+.custom-services-container {
+    max-width: 800px;
+    margin: 70px auto; /* Убедитесь, что верхний отступ указан один раз и корректно */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', Arial, sans-serif; /* Общий стиль шрифта для контейнера */
+}
+
+.main-service-title, .additional-service-heading, .main-service-description {
+    font-family: 'Roboto', Arial, sans-serif; /* Задает шрифт для заголовков и описания */
+}
+
+.main-service-title {
+    color: #2a3f5f;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.main-service-description {
+    color: #4a4a4a;
+    font-size: 19px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.additional-service-heading {
+    color: #2a3f5f;
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.extra-services-form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.checkbox-group {
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    margin-left: 8px;
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.send-request-button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', Arial, sans-serif; /* Обеспечивает согласованность шрифтов в кнопке и заголовках */
+}
+
+.send-request-button:hover {
+    background-color: rgb(238, 80, 23);
+}
+
+/* Стили, добавленные для чекбоксов и их меток */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Стили "галочки" для настраиваемого чекбокса */
+.checkbox-container span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ span {
+    background-color: coral;
+}
+
+.checkbox-container input:checked ~ span:after {
+    display: block;
+}
+
+.checkbox-container span:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Стили для формы */
+.extra-services-form {
+    max-width: 800px; /* Ограничение ширины формы */
+    margin: 0px auto; /* Центрирование формы на странице */
+    padding: 20px;
+    background-color: #fff; /* Фон формы */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для формы */
+}
+/* Стиль для обертки полей ввода, чтобы они располагались в одной строке */
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+/* Стилизация текстовых полей */
+.extra-services-form input[type="text"],
+.extra-services-form input[type="tel"] {
+    width: calc(50% - 10px); /* Задаем ширину полей, отнимая небольшой отступ */
+    margin: 10px 5px; /* Добавляем верхний и нижний отступ, а также небольшой отступ справа и слева */
+    padding: 10px; /* Внутренний отступ в полях ввода */
+    border: 1px solid #ddd; /* Цвет границы */
+    border-radius: 4px; /* Скругление углов поля ввода */
+    font-size: 14px; /* Размер шрифта */
+    flex-grow: 1; /* Позволяет полям ввода расти и заполнять доступное пространство */
+    margin: 5px;
+}
+
+/* Стилизация чекбоксов */
+.extra-services-form .checkbox-group {
+    display: block; /* Блочное отображение для группы с чекбоксами */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стилизация меток */
+.extra-services-form label {
+    display: inline-block; /* Инлайн-блочное отображение для соседства текста с чекбоксом */
+    margin-bottom: 5px; /* Отступ снизу */
+    font-weight: normal; /* Стандартное начертание */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+}
+
+
+/* карусель для фото */
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Адаптируйте под нужную ширину */
+    
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none; /* Скрыть все слайды по умолчанию */
+    width: 100%;
+    transition: .6s ease-in-out opacity;
+  }
+  
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
+  .active {
+    display: block; /* Показывать активный слайд */
+    opacity: 1;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    transform: translate(0, -50%);
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
